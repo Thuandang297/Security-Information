@@ -31,41 +31,30 @@ int main()
 //	Declare variable
 	string P,C;
 	int K;
+
 //	Type a string input and key K
-	cout<<"Type a Plaintext input : ";
+	cout<<"Type a Ciphertext input : ";
 	fflush(stdin);
 	getline(cin,P);
-	 C=P;
-	
-	cout<<"K:";cin>>K;
-// Encryption
-	for(int i=0;i<P.size();i++)
-	{
-		int index=ChangeToNumber(P[i])+K;
-		if(index>25)
-		{
-			index=index%26;
-		}
-			C[i]=ChangeToChar(index);
-	}
-//  Show the Encryption 
-	cout<<"The Ciphertext after Encryption is : "<<C<<endl;
+	C=P;
+
 	
 //Decryption
-	for(int i=0;i<P.size();i++)
+for(int j=0;j<=25;j++)
+{
+	K=j;
+		for(int i=0;i<P.size();i++)
 	{
-
-		int index=ChangeToNumber(C[i])-K;
+		int index=ChangeToNumber(P[i])-K;
 		if(index<0)
 		{
 			index=(index+26)%26;
 
 		}
-			P[i]=ChangeToChar(index);
+			C[i]=ChangeToChar(index);
 	}
 
-//  Show the Decryption 
-	cout<<"The Plaintext after Decryption  is : "<<P;
-	
+	cout<<C<<endl;
+}
 	return 0;
 }
