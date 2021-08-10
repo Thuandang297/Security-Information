@@ -11,11 +11,24 @@ bool check_String(char s,string str)
 	}
 	return false;
 }
+
+int check_Index(char s,string str)
+{
+	for(int i=0;i<str.size();i++)
+	{
+		if(s==str[i])
+		{
+			return i;
+		}
+	}
+
+}
 int main()
 {
 	string P,C;
 	fflush(stdin);
 	//Nhap vao P
+	cout<<"Nhap vao chuoi Khoa:"<<endl;
 	getline(cin,P);
 	C=P;
 	//Cong P voi bang chu cai
@@ -61,18 +74,94 @@ for(int i=0;i<5;i++)
 	cout<<endl;
 }
 
+cout<<endl;
+
 
 //Nhap vao PlanText
-string PlainText;
-string CipherText;
+string Plain,Cipher;
+
+
 
 cout<<"Nhap vao PlainText:";
 	fflush(stdin);
-	//Nhap vao P
-	getline(cin,PlainText);
+	getline(cin,Plain);
+	
+	Cipher=Plain;
+//Ma Hoa
+int x1,y1,x2,y2;
+int pSize=Plain.size();
+for(int i=0;i<pSize;i=i+2)
+{
 
+x1=check_Index(Plain[i],S)/5;
+y1=check_Index(Plain[i],S)%5;
+x2=check_Index(Plain[i+1],S)/5;
+y2=check_Index(Plain[i+1],S)%5;
 
+if(x1==x2)
+{
+		if(y1==4||y2==4)
+	{
+				if(y1==4)
+		{
+			cout<<x1<<y1<<x2<<y2;
+			cout<<"Ki tu thu 1"<<endl;
+			cout<<S[x1*0];
+				Plain[i]=S[x1*0];cout<<Plain[i];
+				Plain[i+1]=S[x2*5+y2+1];cout<<Plain[i+1];	
+				cout<<x1<<y1<<x2<<y2;
+		}
+	   else	if(y2==4)
+		{
+			cout<<x1<<y1<<x2<<y2;
+			Plain[i]=S[x1*5+y1+1];
+			Plain[i+1]=S[x2*5];
+	
+		}
+	}
 
+else
+	{
+		Plain[i]=S[x1*5+y1+1];
+		Plain[i+1]=S[x2*5+y2+1];
+	}
+
+}
+//Truong hop cung cot
+else if(y1==y2)
+{
+		if(y1==4||y2==4)
+		{
+			//Truong hop hop cot cuoi
+			if(x1==4)
+			{
+
+					Plain[i]=S[y1];
+					Plain[i+1]=S[x2*5+5+y2];	
+
+			}
+		    else if(x2==4)
+			{
+
+				Plain[i]=S[x1*5+5+y1];
+				Plain[i+1]=S[y1];
+		
+			}
+		}
+		else
+		{
+		Plain[i]=S[x1*5+5+y1];
+		Plain[i+1]=S[x2*5+5+y1];
+		}
+}
+else
+{
+	Plain[i]=S[x1*5+y2];
+	Plain[i+1]=S[x2*5+y1];
+}
+}
+
+cout<<"Ciphertext is: "<<Plain;
 
 	return 0;
 }
