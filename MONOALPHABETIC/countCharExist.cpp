@@ -9,7 +9,7 @@ int main()
 	C=P;
 	int j;
 	int count =0;
-	for(int i=1;i<C.size();i++)
+	for(int i=0;i<C.size();i++)
 	{
 	 if(C[0]==C[i])
 	 {

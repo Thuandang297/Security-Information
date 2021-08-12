@@ -4,20 +4,22 @@ int main()
 {
 	string P,C;
 	fflush(stdin);
-	getline(cin,P);
-	C=P;
+	getline(cin,C);
+
 	for(int i=0;i<C.size();i++)
 	{
 		for(int j=i+1;j<C.size()-1;j++)
 		{
-			if(C[j]==C[i])
+			if(C[i]==C[j])
 			{
-				C.erase(j);
+				C.erase(j,j+1);
+				j--;
 				
 			}
 		}
-		cout<<C[i];
 		
 	}
+	cout<<C;
+	
 	return 0;
 }

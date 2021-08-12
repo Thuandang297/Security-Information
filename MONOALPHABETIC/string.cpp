@@ -20,6 +20,7 @@ int main()
 		cout<<C[i];
 		
 	}
+	C="ABCABCABCDE";
 
 	for(int i=0;i<C.size();i++)
 	{
@@ -32,6 +33,7 @@ int main()
 				k++;
 			}
 		}
+		erase()
 		cout<<"\nSo lan xuat hien ki tu"<<C[i]<<"la:";
 		cout<<k<<endl;
 	}
