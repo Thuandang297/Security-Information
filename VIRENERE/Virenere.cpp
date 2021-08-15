@@ -57,11 +57,11 @@ int main()
 		for(int i=0;i<psize;i++)
 	{
 		
-    	int	index=ChangeToNumber(P[i])-ChangeToNumber(K[i%m]);
+    	int	index=ChangeToNumber(C[i])-ChangeToNumber(K[i%m]);
 
 		if(index<0)
 		{
-			index=(index+26)%26;
+			index=(index+26);
 
 		}
 			P[i]=ChangeToChar(index);
