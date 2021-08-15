@@ -3,7 +3,7 @@
 	Copyright: 
 	Author: Dang Ngoc Thuan
 	Date: 08/08/21 15:09
-	Description: 
+	Description: This algorithms to hanld Decrypt the Affine code
 */
 
 
@@ -88,7 +88,7 @@ for(int i=0;i<12;i++)
 		}
 			P[i]=ChangeToChar(index);
 	}
-			cout<<"The Plaintext after Decryption of with a="<<a<<" b="<<b<<"  is : "<<P<<endl;
+			cout<<"The Plaintext after Decryption with a="<<a<<" b="<<b<<"  is : "<<P<<endl;
 	}
 }
 

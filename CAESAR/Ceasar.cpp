@@ -20,6 +20,10 @@ using namespace std;
 		{
 				return c-'a';
 		}
+		else
+		{
+			return -1;
+		}
 	
 	}
 	char ChangeToChar(int n)
@@ -33,7 +37,7 @@ int main()
 	int K;
 //	Type a string input and key K
 	cout<<"Type a Plaintext input : ";
-	fflush(stdin);
+//	fflush(stdin);
 	getline(cin,P);
 	 C=P;
 	
@@ -45,6 +49,7 @@ int main()
 		if(index>25)
 		{
 			index=index%26;
+			cout<<index;
 		}
 			C[i]=ChangeToChar(index);
 	}

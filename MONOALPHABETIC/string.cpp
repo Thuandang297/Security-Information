@@ -33,7 +33,7 @@ int main()
 				k++;
 			}
 		}
-		erase()
+	
 		cout<<"\nSo lan xuat hien ki tu"<<C[i]<<"la:";
 		cout<<k<<endl;
 	}

@@ -1,3 +1,11 @@
+/*
+	Name: Dang Ngoc Thuan
+	Copyright: 
+	Author: 
+	Date: 15/08/21 12:42
+	Description: To find the A^(-1) in Affine Algorithm
+*/
+
 #include<iostream>
 using namespace std;
 int main()
@@ -13,8 +21,8 @@ int main()
 			{
 				A[m]=i;
 				B[m]=j;
-				cout<<A[m]<<endl;
-				cout<<B[m]<<endl;
+				cout<<"A ["<<m<<"] is:"<<A[m]<<"\t";
+				cout<<"B ["<<m<<"] is:"<<B[m]<<endl;
 				m++;
 			}
 		}

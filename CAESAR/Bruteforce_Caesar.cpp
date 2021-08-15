@@ -54,7 +54,7 @@ for(int j=0;j<=25;j++)
 			C[i]=ChangeToChar(index);
 	}
 
-	cout<<C<<endl;
+	cout<<"Ciphertext when add Plaintext with "<<j<<" : "<<C<<endl;
 }
 	return 0;
 }
