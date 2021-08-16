@@ -1,3 +1,11 @@
+/*
+	Name: Hanld the time appeared  of fisrt char in string
+	Copyright: 
+	Author: Dang Ngoc Thuan
+	Date: 16/08/21 08:58
+	Description: 
+*/
+
 #include<iostream>
 using namespace std;
 int main()
@@ -17,6 +25,6 @@ int main()
 	 }
 		
 	}
-	cout<<"so lan xuat hien cua ki tu "<<C[0]<< " la :"<<count;
+	cout<<"Number of time "<<C[0]<< " appeared is :"<<count;
 	return 0;
 }

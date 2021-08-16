@@ -4,7 +4,7 @@ int main()
 {
 	
 	string A;
-	char B[100];
+
 	
 //	cout<<"Nhap A:";cin>>A;
 //	cout<<"Cin A:"<<A;
@@ -18,21 +18,17 @@ int main()
 	{
 
 //		cout<<"Index"<<index;
-		A[i]=A[i]+K;
-		cout<<A[i]-'A'<<endl;
-	}
+		int index=((A[i]-'A')+K)%26;
+		A[i]='A'+index;
 
+	}
 	cout<<"CipherText:"<<A<<endl;
-	
-	
-	
-	
-	
 	//Ciphertext
 	cout<<"***************Decryption**********************"<<endl;
 		for(int i=0;i<A.size();i++)
 	{
-		A[i]=A[i]-K;
+		int index =((A[i]-'A')-K+26)%26;
+		A[i]='A'+index;
 	}
 	
 	cout<<"PlainText:"<<A;
